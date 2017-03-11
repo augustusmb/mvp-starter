@@ -1,15 +1,17 @@
-DROP DATABASE IF EXISTS test;
+DROP DATABASE IF EXISTS movies;
 
-CREATE DATABASE test;
+CREATE DATABASE movies;
 
-USE test;
+USE movies;
 
-CREATE TABLE items (
+CREATE TABLE movies (
   id int NOT NULL AUTO_INCREMENT,
-  quantity integer NOT NULL,
-  description varchar(50) NOT NULL,
+  genre varchar(20) NOT NULL,
+  year integer NOT NULL,
+  rating varchar(10) NOT NULL,
   PRIMARY KEY (ID)
 );
+
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql

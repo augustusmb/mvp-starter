@@ -1,11 +1,11 @@
-window.exampleMovieData = [{
+var exampleMovieData = [{
   title: 'Wedding Crashers',
   imageUrl: 'https://tinyurl.com/gnvx5s8',
   year: 2005,
   rating: 'R'
 }, {
   title: 'Shaun of the Dead',
-  imageUrl: 'hhttps://tinyurl.com/hkxzqyt',
+  imageUrl: 'https://tinyurl.com/hkxzqyt',
   year: 2004,
   rating: 'R'
 }, {
@@ -26,4 +26,4 @@ window.exampleMovieData = [{
 }
 ]
 
-// EXPORT DEFAULT HERE?
+// export default exampleMovieData;
