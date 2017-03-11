@@ -5,12 +5,12 @@ var exampleMovieData = [{
   rating: 'R'
 }, {
   title: 'Shaun of the Dead',
-  imageUrl: 'https://tinyurl.com/hkxzqyt',
+  imageUrl: 'https://tinyurl.com/gnvx5s8',
   year: 2004,
   rating: 'R'
 }, {
   title: 'Anchorman: The Legend Of Ron Burgundy',
-  imageUrl: 'https://tinyurl.com/gnvx5s8',
+  imageUrl: 'https://tinyurl.com/zgnl6z9',
   year: 2004,
   rating: 'PG-13'
 }, {
@@ -26,4 +26,4 @@ var exampleMovieData = [{
 }
 ]
 
-// export default exampleMovieData;
+window.exampleMovieData = exampleMovieData;
