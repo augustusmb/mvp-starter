@@ -2,13 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import MovieList from './components/MovieList.jsx';
+import GenreButtonsTable from './components/GenreButtonsTable.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: []
+      allMovies: [],
+      displayMovies: []
     }
+  }
+
+  onGenreButtonClick (genre) {
+    var filteredMovies = this.state.allMovies.filter(function(item) {return item.genre === genre});
+    console.log(filteredMovies);
+    console.log(genre);
+    this.setState({
+      displayMovies: filteredMovies,
+    });
   }
 
   componentDidMount() {
@@ -24,7 +35,8 @@ class App extends React.Component {
       success: (data) => {
         console.log('SUCCESS: ', data);
         context.setState({
-          movies: data
+          allMovies: data,
+          displayMovies: data
         })
       },
       error: (err) => {
@@ -36,14 +48,9 @@ class App extends React.Component {
   render () {
     return (<div>
       <h1 className="question">What are you in the mood for?</h1>
-      <button type="button">Comedy</button>
-      <button type="button">Action</button>
-      <button type="button">Sci-Fi</button>
-      <button type="button">Drama</button>
-      <button type="button">Fantasy</button>
-
+      <GenreButtonsTable onGenreButtonClick={this.onGenreButtonClick.bind(this)}/>
       <h1 id="suggested">Your Movies</h1>
-      <MovieList movies={this.state.movies}/>
+      <MovieList movies={this.state.displayMovies}/>
     </div>)
   }
 }

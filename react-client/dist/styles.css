@@ -7,9 +7,3 @@ body {
   font-size: 50px;
 }
 
-table {
-  table-layout: fixed;
-}
-td {
-  width: 50%;
-}

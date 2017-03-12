@@ -33,12 +33,14 @@ app.get('/movies', function (req, res) {
       console.log('Error getting movies');
       res.sendStatus(500);
     } else {
-      // res.writeHead(201, {
+      console.log('success got movies')
+
+      res.json(data);
+
+      // res.setHeader(201, {
       // 'content-type': 'application/json',
       // 'Access-Control-Allow-Origin': '*'
       // });
-      console.log('success got movies')
-      res.json(data);
     }
   });
 });

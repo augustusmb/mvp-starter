@@ -4,7 +4,9 @@ import MovieListItem from './MovieListItem.jsx';
 const MovieList = (props) => (
   <table>
     <tbody>
-      { props.movies.map(movie => <MovieListItem movie={movie}/>)}
+      <tr>
+        {props.movies.map(movie => <MovieListItem movie={movie}/>)}
+      </tr>
     </tbody>
   </table>
 )

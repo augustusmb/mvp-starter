@@ -7,7 +7,6 @@ const MovieListItem = (props) => (
       <td className="movie-title">{props.movie.title}</td>
       <td className="movie-year">{props.movie.year}</td>
       <td className="movie-genre">{props.movie.genre}</td>
-
       <td className="movie-rating">{props.movie.rating}</td>
 
     </tr>

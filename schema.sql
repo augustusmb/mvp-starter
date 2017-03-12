@@ -24,10 +24,10 @@ CREATE TABLE movies (
  INSERT INTO movies (title, year, genre, rating, image)
 
   VALUES
-    ('The Dark Knight', 2008, 'action', 'PG-13', 'https://tinyurl.com/zlg7z7o'),
-    ('Avatar', 2009, 'action', 'PG-13', 'https://tinyurl.com/hzk2mjd'),
-    ('Minority Report', 2002, 'action', 'PG-13', 'https://tinyurl.com/zznutts'),
-    ('Kill Bill: Volume 1', 2003, 'action', 'R', 'https://tinyurl.com/jpx53z9'),
+    ('The Dark Knight', 2008, 'Action', 'PG-13', 'https://tinyurl.com/zlg7z7o'),
+    ('Avatar', 2009, 'Action', 'PG-13', 'https://tinyurl.com/hzk2mjd'),
+    ('Minority Report', 2002, 'Action', 'PG-13', 'https://tinyurl.com/zznutts'),
+    ('Kill Bill: Volume 1', 2003, 'Action', 'R', 'https://tinyurl.com/jpx53z9'),
     ('The Departed', 2006, 'Drama', 'R', 'https://tinyurl.com/jxovsds'),
     ('The Notebook', 2004, 'Drama', 'PG-13', 'https://tinyurl.com/gqd2xpt'),
     ('The Lord of the Rings: The Fellowship of the Ring', 2001, 'Fantasy', 'PG-13', 'https://tinyurl.com/jy5m4yr'),
@@ -37,5 +37,5 @@ CREATE TABLE movies (
     ('Shaun of the Dead', 2004, 'Comedy', 'R', 'https://tinyurl.com/gnvx5s8'),
     ('Step Brothers', 2008, 'Comedy', 'R', 'https://tinyurl.com/grsfggp'),
     ('Wedding Crashers', 2005, 'Comedy', 'R', 'https://tinyurl.com/gnvx5s8'),
-    ('Gladiator', 2000, 'action', 'R', 'https://tinyurl.com/gtuavfc');
+    ('Gladiator', 2000, 'Action', 'R', 'https://tinyurl.com/gtuavfc');
 
