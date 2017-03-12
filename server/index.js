@@ -45,6 +45,26 @@ app.get('/movies', function (req, res) {
   });
 });
 
+app.post('/movies', function(req, res) {
+  console.log('YOU MADE A POST');
+
+  var entry = req.body
+
+    connection.query('INSERT into movies (title, year, genre, rating, image) values (?, ?, ?, ?, ?)', [entry.title, entry.year, entry.genre, entry.rating, entry.image], function (err, results, fields) {
+    if (!err) {
+      res.writeHead(201, {
+      'Access-Control-Allow-Origin': '*'
+      });
+    } else {
+      res.writeHead(400, {
+      'Access-Control-Allow-Origin': '*'
+      });
+    }
+    // send back empty response
+    res.end();
+    });
+});
+
 app.options('/movies', function(req, res) {
   res.writeHead(200, {
     'Access-Control-Allow-Headers': 'Content-Type',

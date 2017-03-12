@@ -23,6 +23,26 @@ class App extends React.Component {
     });
   }
 
+  onMovieSubmit (movieInfo) {
+    var context = this;
+    $.ajx({
+      url: '/movies',
+      method: 'POST',
+      headers: {
+      'content-type': 'application/json'
+      // 'Access-Control-Allow-Headers': 'Content-Type',
+      // 'Access-Control-Allow-Origin': '*'
+      },
+      data: JSON.stringify(movieInfo),
+      success: (data) => {
+        console.log('Successful Post Req', data);
+      },
+      error: (err) => {
+        console.log('ERROR: ', err);
+      }
+    });
+  }
+
   componentDidMount() {
     var context = this;
     $.ajax({
@@ -48,7 +68,7 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <MovieSubmitForm />
+      <MovieSubmitForm onMovieSubmit={this.onMovieSubmit.bind(this)}/>
       <h1 className="question">What are you in the mood for?</h1>
       <GenreButtonsTable onGenreButtonClick={this.onGenreButtonClick.bind(this)}/>
       <h1 id="suggested">Your Movies</h1>

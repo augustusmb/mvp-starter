@@ -1,14 +1,17 @@
 import React from 'react';
 
 const MovieSubmitForm = (props) => (
-  <div>
-    <h3>Add a movie to our database</h3>
-    Image: <input id="image"></input>
-    Title: <input id="title"></input>
-    Year: <input id="year"></input>
-    Genre: <input id="genre"></input>
-    Rating: <input id="rating"></input>
-  </div>
+  <table>
+    <tbody>
+    <th>Add a movie to our database</th>
+    <tr>Image: <input id="image"></input></tr>
+    <tr>Title: <input id="title"></input></tr>
+    <tr>Year: <input id="year"></input></tr>
+    <tr>Genre: <input id="genre"></input></tr>
+    <tr>Rating: <input id="rating"></input></tr>
+    <button id="add-movie">Add Movie</button>
+    </tbody>
+  </table>
 
 )
 
