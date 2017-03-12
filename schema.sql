@@ -38,4 +38,3 @@ CREATE TABLE movies (
     ('Step Brothers', 2008, 'Comedy', 'R', 'https://tinyurl.com/grsfggp'),
     ('Wedding Crashers', 2005, 'Comedy', 'R', 'https://tinyurl.com/gnvx5s8'),
     ('Gladiator', 2000, 'Action', 'R', 'https://tinyurl.com/gtuavfc');
-

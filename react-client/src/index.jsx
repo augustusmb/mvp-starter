@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import MovieList from './components/MovieList.jsx';
 import GenreButtonsTable from './components/GenreButtonsTable.jsx';
+import MovieSubmitForm from './components/MovieSubmitForm.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class App extends React.Component {
 
   render () {
     return (<div>
+      <MovieSubmitForm />
       <h1 className="question">What are you in the mood for?</h1>
       <GenreButtonsTable onGenreButtonClick={this.onGenreButtonClick.bind(this)}/>
       <h1 id="suggested">Your Movies</h1>
