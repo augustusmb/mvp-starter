@@ -18,7 +18,7 @@ var selectAll = function(callback) {
 };
 
 var insertMovie = function(data, callback) {
-  connection.query('INSERT INTO addedmovies (title) VALUES (?, ?, ?, ?, ?)', [data.title], function(err, results, fields) {
+  connection.query('INSERT INTO addedmovies (title) VALUES (?, ?, ?, ?, ?)', [data.body.title], function(err, results, fields) {
     if(err) {
       callback(err, null);
     } else {

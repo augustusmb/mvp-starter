@@ -1,12 +1,33 @@
 body {
-  background-color: grey;
+  background-color: #3E3B3B;
   margin-left: 100px;
 }
 
-#suggested {
+.question {
+  color: #E3DCDF;
   font-size: 50px;
 }
 
+#suggested {
+  color: #E2E7FD;
+  font-size: 35px;
+  text-indent: 30px;
+}
+
 .movie-title {
+  color: #F9CA78;
   font-size: 30px;
+}
+
+.movie-year {
+  font-size: 28px;
+  color: #EA4F4F;
+}
+
+.movie-genre {
+  color: #EDEAD0;
+}
+
+.movie-rating {
+  color: #EDEAD0;
 }

@@ -14,12 +14,20 @@ class App extends React.Component {
     }
   }
 
+  returnAllMovies () {
+    this.setState({
+      displayMovies: this.state.allMovies,
+      genre: 'Movies'
+    });
+  }
+
   onGenreButtonClick (genre) {
     var filteredMovies = this.state.allMovies.filter(function(item) {return item.genre === genre});
     console.log(filteredMovies);
     console.log(genre);
     this.setState({
       displayMovies: filteredMovies,
+      genre: genre.toUpperCase()
     });
   }
 
@@ -60,7 +68,8 @@ class App extends React.Component {
         console.log('SUCCESS: ', data);
         context.setState({
           allMovies: data,
-          displayMovies: data
+          displayMovies: data,
+          genre: 'Movies'
         })
       },
       error: (err) => {
@@ -71,11 +80,12 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <MovieSubmitForm onMovieSubmit={this.onMovieSubmit.bind(this)}/>
-      <h1 className="question">What are you in the mood for?</h1>
-      <GenreButtonsTable onGenreButtonClick={this.onGenreButtonClick.bind(this)}/>
-      <h1 id="suggested">Your Movies</h1>
+      <h1 className="question">Tonight's Movie</h1>
+      <GenreButtonsTable onGenreButtonClick={this.onGenreButtonClick.bind(this)} returnAllMovies={this.returnAllMovies.bind(this)}/>
+      <h1 id="suggested">{this.state.genre}</h1>
       <MovieList movies={this.state.displayMovies}/>
+      <MovieSubmitForm onMovieSubmit={this.onMovieSubmit.bind(this)}/>
+
     </div>)
   }
 }
