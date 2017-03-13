@@ -17,6 +17,15 @@ CREATE TABLE movies (
 );
 
 
+DROP TABLE IF EXISTS addedmovies;
+
+CREATE TABLE addedmovies (
+  id integer NOT NULL AUTO_INCREMENT,
+  title varchar(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql
  *  to create the database and the tables.*/

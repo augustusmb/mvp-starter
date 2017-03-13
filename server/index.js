@@ -50,7 +50,7 @@ app.post('/movies', function(req, res) {
 
   var entry = req.body
 
-    connection.query('INSERT into movies (title, year, genre, rating, image) values (?, ?, ?, ?, ?)', [entry.title, entry.year, entry.genre, entry.rating, entry.image], function (err, results, fields) {
+  movies.insertMovie(entry, function(err, data) {
     if (!err) {
       res.writeHead(201, {
       'Access-Control-Allow-Origin': '*'
@@ -62,7 +62,7 @@ app.post('/movies', function(req, res) {
     }
     // send back empty response
     res.end();
-    });
+  });
 });
 
 app.options('/movies', function(req, res) {

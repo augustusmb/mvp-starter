@@ -1,21 +1,16 @@
 import React from 'react';
+import $ from 'jquery';
+
 
 const MovieSubmitForm = (props) => (
   <table>
-    <tbody>
-    <th>Add a movie to our database</th>
-    <tr>Image: <input id="image"></input></tr>
-    <tr>Title: <input id="title"></input></tr>
-    <tr>Year: <input id="year"></input></tr>
-    <tr>Genre: <input id="genre"></input></tr>
-    <tr>Rating: <input id="rating"></input></tr>
-    <button id="add-movie">Add Movie</button>
-    </tbody>
-  </table>
+    <tr><th>Add a movie:</th></tr>
 
+    <tr><td>Title: </td><td><input type="text" id="title"></input></td></tr>
+
+    <button id="add-movie" onClick={() => {props.onMovieSubmit(document.getElementById('title'))}}>Add Movie</button>
+  </table>
 )
 
-//
-//
 
 export default MovieSubmitForm;

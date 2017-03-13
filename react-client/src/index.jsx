@@ -23,9 +23,10 @@ class App extends React.Component {
     });
   }
 
-  onMovieSubmit (movieInfo) {
+  onMovieSubmit (title) {
     var context = this;
-    $.ajx({
+    console.log('You Submitted!');
+    $.ajax({
       url: '/movies',
       method: 'POST',
       headers: {
@@ -33,7 +34,9 @@ class App extends React.Component {
       // 'Access-Control-Allow-Headers': 'Content-Type',
       // 'Access-Control-Allow-Origin': '*'
       },
-      data: JSON.stringify(movieInfo),
+      data: {
+        title: title
+      },
       success: (data) => {
         console.log('Successful Post Req', data);
       },

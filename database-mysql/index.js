@@ -17,8 +17,15 @@ var selectAll = function(callback) {
   });
 };
 
-// var insertMovie = function(callback) {
-//
-// }
+var insertMovie = function(data, callback) {
+  connection.query('INSERT INTO addedmovies (title) VALUES (?, ?, ?, ?, ?)', [data.title], function(err, results, fields) {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
 
 module.exports.selectAll = selectAll;
+module.exports.insertMovie = insertMovie;
