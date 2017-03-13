@@ -46,9 +46,10 @@ app.get('/movies', function (req, res) {
 });
 
 app.post('/movies', function(req, res) {
-  console.log('YOU MADE A POST');
+  console.log('2. You POSTed, body: ', req.body);
 
-  var entry = req.body
+
+  var entry = req.body;
 
   movies.insertMovie(entry, function(err, data) {
     if (!err) {

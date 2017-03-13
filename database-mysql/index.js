@@ -18,10 +18,13 @@ var selectAll = function(callback) {
 };
 
 var insertMovie = function(data, callback) {
-  connection.query('INSERT INTO addedmovies (title) VALUES (?, ?, ?, ?, ?)', [data.body.title], function(err, results, fields) {
+  connection.query('INSERT INTO addedmovies (title) VALUES (?)', [data.title], function(err, results, fields) {
     if(err) {
+      console.log('Error adding movie - In SQL Method')
       callback(err, null);
     } else {
+      console.log('3. Success adding movie - In SQL Method:', data)
+
       callback(null, results);
     }
   });

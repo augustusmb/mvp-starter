@@ -7,9 +7,9 @@ const MovieSubmitForm = (props) => (
     <tbody>
         <tr><th>Add a movie:</th></tr>
 
-        <tr><td>Title: </td><td><input type="text" id="title"></input></td></tr>
+        <tr><td>Title: </td><td><input type="textbox" id="addedmovie"></input></td></tr>
 
-        <button id="add-movie" onClick={() => {props.onMovieSubmit(document.getElementById('title'))}}>Add Movie</button>
+        <tr><td><button id="add-movie" onClick={() => {props.onMovieSubmit($('#addedmovie').val())}}>Add Movie</button></td></tr>
     </tbody>
   </table>
 )

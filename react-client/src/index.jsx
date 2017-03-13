@@ -33,18 +33,16 @@ class App extends React.Component {
 
   onMovieSubmit (title) {
     var context = this;
-    console.log('You Submitted!');
+    console.log('1: You Submitted!, title: ', title);
     $.ajax({
       url: '/movies',
       method: 'POST',
       headers: {
-      'content-type': 'application/json'
-      // 'Access-Control-Allow-Headers': 'Content-Type',
-      // 'Access-Control-Allow-Origin': '*'
+      'content-type': 'application/json',
+        // 'Access-Control-Allow-Headers': 'Content-Type',
+        // 'Access-Control-Allow-Origin': '*'
       },
-      data: {
-        title: title
-      },
+      data: JSON.stringify({title: title}),
       success: (data) => {
         console.log('Successful Post Req', data);
       },
