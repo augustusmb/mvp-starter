@@ -33,7 +33,7 @@ CREATE TABLE addedmovies (
  INSERT INTO movies (title, year, genre, rating, image)
 
   VALUES
-    ('Pulp Fiction', 1994, 'Drama', 'R', 'https://tinyurl.com/hrvx7aj');
+    ('Pulp Fiction', 1994, 'Drama', 'R', 'https://tinyurl.com/hrvx7aj'),
     ('The Dark Knight', 2008, 'Action', 'PG-13', 'https://tinyurl.com/zlg7z7o'),
     ('Wedding Crashers', 2005, 'Comedy', 'R', 'https://tinyurl.com/gnvx5s8'),
     ('Frankenstein', 1931, 'Classics', 'Unrated', 'https://tinyurl.com/hm2utgr'),
